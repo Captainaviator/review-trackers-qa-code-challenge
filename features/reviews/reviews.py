@@ -15,7 +15,7 @@ def go_to_product_page(step):
 def click_on_review_stars(step):
     review_stars_class = 'stamped-product-reviews-badge stamped-main-badge'
     world.browser.find_element_by_xpath('//*[@class="{}"]'.format(review_stars_class)).click()
-    time.sleep(2)
+    time.sleep(4)
 
 
 @step('the reviews section should be scrolled into view')
@@ -32,7 +32,7 @@ def click_review_keyword(step, position):
     world.clicked_keyword = target_keyword.text
     print '      Clicking on {}\n'.format(world.clicked_keyword)
     target_keyword.click()
-    time.sleep(1)
+    time.sleep(3)
 
 
 @step('I select "(.*)" from the "(.*)" filter')
@@ -48,7 +48,7 @@ def select_review_filter_dropdown(step, target_selection, target_filter):
                     world.filter_level = filter.text
                     print '      found {}\n'.format(filter.text)
                     filter.click()
-                    time.sleep(2)
+                    time.sleep(4)
 
 
 @step('the reviews should filter correctly by "(.*)"')
